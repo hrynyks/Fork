@@ -1,0 +1,96 @@
+.get {
+    padding: 98px 0 50px;
+    background: #F4F4F4;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            // order: 2;
+        }
+    }
+
+    &__item {
+        max-width: 524px;
+        width: 100%;
+        position: relative;
+        padding-left: 134px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 111px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &-1::before {
+
+            background-image: url(./../img/get-icon-1.svg);
+    
+            height: 64px;
+        }
+
+        &-2::before {
+
+            background-image: url(./../img/get-icon-2.svg);
+           
+            height: 80px;
+
+        }
+
+        &-3::before {
+
+            background-image: url(./../img/get-icon-3.svg);
+          
+            height: 84px;
+
+        }
+
+        &-4::before {
+
+            background-image: url(./../img/get-icon-4.svg);
+           
+            height: 71px;
+
+        }
+
+        &-title {
+            color: #323232;
+            margin-bottom: 17px;
+
+            @include a (tablet-xl) {
+                // order: 1;
+            }
+        }
+
+        &-descr {
+            font-size: toRem(14);
+            line-height: 21px;
+            color: #848E97;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__title {
+        font-size: toRem(48);
+        color: $main-color;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

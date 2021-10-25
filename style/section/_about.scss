@@ -1,0 +1,47 @@
+.about {
+    padding: 108px 0 50px;
+    background: url(./../img/about-bg.jpg) no-repeat center/cover;
+
+    &__title {
+        font-size: toRem(48);
+        text-align: center;
+        color: $light-color;
+        margin-bottom: 82px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 335px));
+        place-items: baseline;
+        justify-content: center;
+        text-align: center;
+        row-gap: 110px;
+        margin-bottom: 110px;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__descr {
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        color: $light-color;
+        line-height: 24px;
+    }
+
+    &__text {
+        font-family: 'Lato', sans-serif;
+        color: #A291A5;
+        text-align: center;
+
+        &::after {
+            content: "";
+            display: block;
+            max-width: 780px;
+            height: 2px;
+            background: #645766;
+            margin: 18px auto 0;
+        }
+    }
+}

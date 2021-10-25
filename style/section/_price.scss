@@ -1,0 +1,98 @@
+.price {
+    margin-top: -15px;
+    padding: 83px 0 140px;
+    background: url(./../img/price-bg.jpg) no-repeat center/cover;
+
+    &__title {
+        font-size: toRem(48);
+        color: $light-color;
+        text-align: center;
+        margin-bottom: 112px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 257px);
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+        @include a (laptop) {
+            grid-template-columns: repeat(2, 257px);
+        }
+
+        @include a (tablet) {
+            grid-template-columns: 257px;
+        }
+    }
+
+    &__item {
+        min-height: 463px;
+        background-color: rgba($color: #ffffff, $alpha: 0.11);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .5s;
+
+        &:hover {
+            transform: scaleY(1.2);
+            background-color: rgba($color: #463048, $alpha: 0.84);
+        }
+
+        &-title {
+            font-size: toRem(24);
+            padding: 36px 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: rgba($color: #ffffff, $alpha: 0.06);
+            color: $light-color;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 10px 36px;
+            height: 100%;
+        }
+
+        &-number {
+            display: block;
+            text-align: center;
+            font-size: toRem(60);
+            color: $light-color;
+            margin-bottom: 20px;
+        }
+
+        &-month {
+            display: block;
+            font-size: toRem(14);
+            color: $light-color;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        &-line {
+            width: 60px;
+            height: 5px;
+            background: #8D81AC;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        &-descr {
+            display: block;
+            text-align: center;
+            color: $light-color;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__btn {
+        padding: 15px 38px;
+        border-radius: 40px;
+        text-transform: uppercase;
+    }
+}
